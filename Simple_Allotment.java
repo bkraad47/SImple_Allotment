@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -30,6 +24,7 @@ public class Simple_Allotment {
          String Answer="";
          
          // Count until the item list is empty
+         int no=1;//Last space count
          while(items > 0){
              /* 
              
@@ -38,13 +33,19 @@ public class Simple_Allotment {
              we need to find a good common divisor where least number of containers are used and little space is wasted.
               
              */
-             if(items > bin[bin.length-1] && (items-bin[bin.length-1]) >= bin[0] ){
+             
+             if(items > bin[bin.length-no] && (items-bin[bin.length-no]) >= bin[0] ){
                  
                  
                  //Taking the largest bin item chunks out
-                 items = items-bin[bin.length-1];
-                 Answer = Answer+" "+bin[bin.length-1];
+                 items = items-bin[bin.length-no];
+                 Answer = Answer+" "+bin[bin.length-no];
                  
+                 // If item small move on tothe next large item
+             }else if(items < bin[bin.length-no] && (items > bin[bin.length-(no+1)] && (items-bin[bin.length-(no+1)]) >= bin[0] ) ){
+                
+                 no++;//Move laspace count to previous item
+                
              }else{
                  //Greedy search for best answer
                  //Containers to space wasted & hold weights(space wasted + containers used)
@@ -172,13 +173,13 @@ public class Simple_Allotment {
             
            //If input correct evaluate
            }else if(dataString.matches(regExInt)){
-               System.out.println("Containers Required to store "+dataString.trim()+" items => " + (pack_step(Integer.parseInt(dataString),bin)));
+               System.out.println("containers required to store "+dataString.trim()+" items => " + (pack_step(Integer.parseInt(dataString),bin)));
            }
         }
          
         }catch (Exception e){
            //Throw error
-           System.out.println("Exception Occured. Heres why:"); 
+           System.out.println("Exception occured. Heres why:"); 
            e.printStackTrace();
         }
         

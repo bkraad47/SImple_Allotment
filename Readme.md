@@ -1,6 +1,6 @@
 Simple Allotment pwc test 2 Badruddin Kamal
 
-Based on simple bin packing algorithms, basic maths & Euclids greatest common divisor algorithm.(Greedy Soln) 
+Based on simple bin packing algorithms, basic maths & Euclids greatest common divisor algorithm.
 
 
 Euclids greatest common divisor https://en.wikipedia.org/wiki/Euclidean_algorithm
@@ -8,7 +8,7 @@ bin packing http://www.geeksforgeeks.org/bin-packing-problem-minimize-number-of-
 java scanner http://stackoverflow.com/questions/23194290/how-to-capture-enter-key-using-scanner-as-console-input
 Some lambda expressions mapping string array to int array http://stackoverflow.com/questions/6881458/converting-a-string-array-into-an-int-array-in-java
  
- Required Java Version 1.8.0
+Required Java Version 1.8.0
  
  To run
  1. Goto directory bash
