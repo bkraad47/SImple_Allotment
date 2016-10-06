@@ -41,7 +41,7 @@ public class Simple_Allotment {
                  items = items-bin[bin.length-no];
                  Answer = Answer+" "+bin[bin.length-no];
                  
-                 // If item small move on tothe next large item
+             // If item small move on tothe next large item
              }else if(items < bin[bin.length-no] && (items > bin[bin.length-(no+1)] && (items-bin[bin.length-(no+1)]) >= bin[0] ) ){
                 
                  no++;//Move laspace count to previous item
